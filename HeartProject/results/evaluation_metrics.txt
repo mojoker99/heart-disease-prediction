@@ -1,0 +1,52 @@
+
+Heart Disease Prediction Project 
+-------------------------------- 
+Dataset: UCI Machine Learning Repository (Heart Disease Dataset)
+Rows: 303
+Features: 13 original features (after preprocessing → scaled, encoded, cleaned)
+Target: Binary classification (0 = No disease, 1 = Disease)
+
+Steps Overview:
+---------------
+Step 1 — Data Loading & Preprocessing
+    - Handled missing values (ca, thal).
+    - Encoded categorical features.
+    - Applied feature scaling.
+    - Outlier detection and visualization.
+
+Step 2 — PCA (Visualization only)
+    - Reduced dataset to 2D/3D for visualization.
+    - Showed clear separation between disease and non-disease groups.
+
+Step 3 — Feature Selection
+    - Applied Chi-Square, RFE, and Feature Importance.
+    - Selected most relevant predictors for final models.
+
+Step 4 — Supervised Learning
+    Models Evaluated:
+        1. Logistic Regression → Accuracy ~ 0.836
+        2. KNN → Accuracy ~ 0.918
+        3. Decision Tree → Accuracy ~ 0.869
+        4. Random Forest → Accuracy ~ 0.918
+        5. SVM → Accuracy ~ 0.852
+
+Step 5 — Unsupervised Learning
+    - Applied K-Means & Hierarchical Clustering.
+    - Used PCA for visualization of clusters.
+    - Helped to explore natural grouping in data.
+
+Step 6 — Hyperparameter Tuning
+    - Optimized models with GridSearchCV.
+    - Best performing models after tuning:
+        * Random Forest → Accuracy ~ 0.85
+        * KNN → Accuracy ~ 0.80
+        * SVM → Accuracy ~ 0.88
+
+Final Notes:
+------------
+- Preprocessing (scaling + encoding) was critical for SVM & Logistic Regression.
+- Random Forest and SVM delivered the best balanced performance.
+- KNN initially performed very well before tuning.
+- Unsupervised learning provided insights but not as strong as supervised models.
+- Final pipeline (data + model) can be saved for deployment.
+
